@@ -1,0 +1,37 @@
+{
+  "name": "ts-camelize",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nabetama/ts-camelize.git"
+  },
+  "keywords": [
+    "transform",
+    "camel-case"
+  ],
+  "author": "Mao Nabeta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabetama/ts-camelize/issues"
+  },
+  "homepage": "https://github.com/nabetama/ts-camelize#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.2",
+    "typescript": "^3.3.3"
+  }
+}
