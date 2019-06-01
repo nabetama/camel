@@ -1,6 +1,6 @@
-interface rObj {
+type rObj = {
   [key: string]: any;
-}
+};
 
 const camelize = (obj: Object | string): Object | string => {
   if (typeof obj === "string") {
@@ -16,7 +16,7 @@ const toCamelCase = (s: string): string => {
 };
 
 const recursive = (obj: rObj): Object =>
-  Object.keys(obj).reduce((acum: rObj, cur: string) => {
+  Object.keys(obj).reduce<rObj>((acum, cur) => {
     acum[toCamelCase(cur)] = obj[cur];
     return acum;
   }, {});
