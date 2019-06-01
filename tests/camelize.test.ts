@@ -29,5 +29,16 @@ describe("camelize", () => {
       const res = camelize(arg);
       expect(res).toEqual({ fooBarBaz: 42 });
     });
+
+    test("depth 2", () => {
+      const arg = {
+        foo_bar_baz: 42,
+        lorem_ipsum: {
+          dolor_sit_amet: 42,
+        },
+      };
+      const res = camelize(arg);
+      expect(res).toEqual({ fooBarBaz: 42, loremIpsum: { dolorSitAmet: 42 } });
+    });
   });
 });
