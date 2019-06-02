@@ -10,7 +10,7 @@ const camelize = (obj: Object | string): Object | string => {
 };
 
 const toCamelCase = (s: string): string => {
-  return s.replace(/[_.-](\w|$)/g, (_: string, captured: string) =>
+  return s.replace(/[_.-](\w|$)/g, (_, captured: string) =>
     captured.toUpperCase()
   );
 };
