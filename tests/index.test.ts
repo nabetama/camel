@@ -1,22 +1,22 @@
-import camelize from "..";
+import camel from "..";
 
 describe("camelize", () => {
   describe("string", () => {
     test("split by underscore", () => {
       const arg = "foo_bar_baz";
-      const res = camelize(arg);
+      const res = camel(arg);
       expect(res).toEqual("fooBarBaz");
     });
 
     test("split by dot", () => {
       const arg = "foo.bar.baz";
-      const res = camelize(arg);
+      const res = camel(arg);
       expect(res).toEqual("fooBarBaz");
     });
 
     test("split by dash", () => {
       const arg = "foo-bar-baz";
-      const res = camelize(arg);
+      const res = camel(arg);
       expect(res).toEqual("fooBarBaz");
     });
   });
@@ -26,7 +26,7 @@ describe("camelize", () => {
       const arg = {
         foo_bar_baz: 42,
       };
-      const res = camelize(arg);
+      const res = camel(arg);
       expect(res).toEqual({ fooBarBaz: 42 });
     });
 
@@ -37,7 +37,7 @@ describe("camelize", () => {
           dolor_sit_amet: 42,
         },
       };
-      const res = camelize(arg);
+      const res = camel(arg);
       expect(res).toEqual({ fooBarBaz: 42, loremIpsum: { dolorSitAmet: 42 } });
     });
   });
