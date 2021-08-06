@@ -18,7 +18,10 @@
     "testRegex": "tests/.*test.(ts|js)"
   },
   "repository": "git+ssh://git@github.com/nabetama/ts-camelize.git",
-  "keywords": ["transform", "camel-case"],
+  "keywords": [
+    "transform",
+    "camel-case"
+  ],
   "author": "Mao Nabeta",
   "license": "MIT",
   "bugs": {
