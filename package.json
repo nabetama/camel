@@ -18,10 +18,7 @@
     "testRegex": "tests/.*test.(ts|js)"
   },
   "repository": "git+ssh://git@github.com/nabetama/ts-camelize.git",
-  "keywords": [
-    "transform",
-    "camel-case"
-  ],
+  "keywords": ["transform", "camel-case"],
   "author": "Mao Nabeta",
   "license": "MIT",
   "bugs": {
@@ -41,7 +38,7 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.8.0",
+    "jest": "^27.1.0",
     "prettier": "^1.17.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
